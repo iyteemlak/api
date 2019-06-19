@@ -10,20 +10,7 @@ import java.util.List;
 @Component
 public class HouseService {
 
-    private final List<HouseDTO> houses;
-
-    public HouseService() {
-        HouseDTO house = new HouseDTO();
-        house.setId(1L);
-        house.setRooms("2+1");
-        house.setPrice(500);
-        house.setContact("12123123123123");
-        house.setDescription("asfasdfasdf");
-        house.setLocation(null);
-
-        this.houses = new ArrayList<>();
-        this.houses.add(house);
-    }
+    private final List<HouseDTO> houses = new ArrayList<>();
 
     public List<HouseDTO> getAllHouses() {
         return houses;
@@ -36,7 +23,7 @@ public class HouseService {
         house.setPrice(addHouseRequest.getPrice());
         house.setContact(addHouseRequest.getContact());
         house.setDescription(addHouseRequest.getDescription());
-//        house.setLocation(addHouseRequest.getLocation());
+        house.setLocation(addHouseRequest.getLocation());
         this.houses.add(house);
     }
 

@@ -3,7 +3,7 @@ package com.iyteemlak.api.model.dto;
 public class LatLngDTO {
 
     private Double lat;
-    private Double lon;
+    private Double lng;
 
     public Double getLat() {
         return lat;
@@ -13,11 +13,11 @@ public class LatLngDTO {
         this.lat = lat;
     }
 
-    public Double getLon() {
-        return lon;
+    public Double getLng() {
+        return lng;
     }
 
-    public void setLon(Double lon) {
-        this.lon = lon;
+    public void setLng(Double lng) {
+        this.lng = lng;
     }
 }

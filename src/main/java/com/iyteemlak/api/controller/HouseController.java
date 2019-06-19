@@ -21,12 +21,14 @@ public class HouseController {
     }
 
     @GetMapping(produces = "application/json")
+    @CrossOrigin(origins = "http://localhost:3000")
     public List<HouseDTO> getAllHouses() {
         return houseService.getAllHouses();
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CrossOrigin(origins = "http://localhost:3000")
     public void addHouse(@RequestBody AddHouseRequest addHouseRequest) {
         houseService.addHouse(addHouseRequest);
     }
