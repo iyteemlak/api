@@ -7,9 +7,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/iyteemlak
     username: postgres
     password: C1e92FD27f
-    hikari:
-      connectionTimeout: 20000
-      maximumPoolSize: 5
+    maxActive: 10
+    maxIdle: 5
+    minIdle: 2
+    initialSize: 5
+    removeAbandoned: true
   jpa:
     properties:
       hibernate:
@@ -20,9 +22,6 @@ spring:
 
 # Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
 spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false
-
-# Because detection is disabled you have to set correct dialect by hand.
-#spring.jpa.database-platform: org.hibernate.dialect.PostgreSQL9Dialect
 
 server:
   port: 8082
@@ -39,5 +38,5 @@ spring:
 
 swagger:
   host:
-    url: iyteemlak.com
+    url: iyteemlak-api.herokuapp.com
     path:
