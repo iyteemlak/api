@@ -44,8 +44,10 @@ public class HouseService {
         house.setPrice(addHouseRequest.getPrice());
         house.setContact(addHouseRequest.getContact());
         house.setDescription(addHouseRequest.getDescription());
-        house.setLat(addHouseRequest.getLocation().getLat());
-        house.setLng(addHouseRequest.getLocation().getLng());
+        if(addHouseRequest.getLocation() != null) {
+            house.setLat(addHouseRequest.getLocation().getLat());
+            house.setLng(addHouseRequest.getLocation().getLng());
+        }
         house.setActive(false);
         houseRepository.save(house);
     }
