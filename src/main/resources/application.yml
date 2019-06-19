@@ -1,7 +1,28 @@
 spring:
   application:
     name: Iyte Emlak API
+  datasource:
+    platform: postgres
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5432/iyteemlak
+    username: postgres
+    password: C1e92FD27f
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+      show-sql: true
 
+# Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false
+
+# Because detection is disabled you have to set correct dialect by hand.
+#spring.jpa.database-platform: org.hibernate.dialect.PostgreSQL9Dialect
 
 server:
   port: 8082
