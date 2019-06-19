@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Iyte Emlak API
+
+
+server:
+  port: 8082
+
+swagger:
+  host:
+    url: localhost:8082
+    path:
+
+---
+
+spring:
+  profiles: prod
+
+swagger:
+  host:
+    url: iyteemlak.com
+    path:
