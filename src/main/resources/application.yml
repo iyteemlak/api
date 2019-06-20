@@ -13,12 +13,13 @@ spring:
     initialSize: 5
     removeAbandoned: true
   jpa:
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create
-      show-sql: true
+      ddl-auto: none
+
 
 # Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
 spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false
