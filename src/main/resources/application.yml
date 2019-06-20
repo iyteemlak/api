@@ -3,7 +3,6 @@ spring:
     name: Iyte Emlak API
   datasource:
     platform: postgres
-    initialization-mode: always
     url: jdbc:postgresql://localhost:5432/iyteemlak
     username: postgres
     password: C1e92FD27f
