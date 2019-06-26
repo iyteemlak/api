@@ -34,9 +34,19 @@ swagger:
 ---
 
 spring:
+  profiles: stage
+
+swagger:
+  host:
+    url: stage-api.iyteemlak.com
+    path:
+
+---
+
+spring:
   profiles: prod
 
 swagger:
   host:
-    url: iyteemlak-api.herokuapp.com
+    url: api.iyteemlak.com
     path:
