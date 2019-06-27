@@ -1,5 +1,5 @@
 # iyteemlak.com
-> This project is a REST api for iyteemlak.com web application. iyteemlak.com simply helps Iyte students to find house for rent.
+> This project is a REST api for iyteemlak.com web application. iyteemlak.com simply helps Iyte students to find house for rent. Checkout [trello page](https://trello.com/iyteemlakcom) for more info about development process.
 
 This project was bootstrapped with [Spring Boot](https://spring.io/projects/spring-boot).
 
