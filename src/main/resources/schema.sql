@@ -7,10 +7,10 @@ CREATE TABLE public.house (
     lat double precision,
     lng double precision,
     price integer,
-    rooms character varying(255)
+    rooms character varying(255),
+    created_at timestamp,
+    updated_at timestamp
 );
-
--- ALTER TABLE public.house OWNER TO postgres;
 
 CREATE SEQUENCE public.house_id_seq
     START WITH 1
@@ -18,8 +18,6 @@ CREATE SEQUENCE public.house_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
--- ALTER TABLE public.house_id_seq OWNER TO postgres;
 
 ALTER SEQUENCE public.house_id_seq OWNED BY public.house.id;
 

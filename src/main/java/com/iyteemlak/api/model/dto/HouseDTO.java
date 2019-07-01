@@ -1,5 +1,7 @@
 package com.iyteemlak.api.model.dto;
 
+import java.time.LocalDateTime;
+
 public class HouseDTO {
 
     private Long id;
@@ -8,6 +10,8 @@ public class HouseDTO {
     private String contact;
     private String description;
     private LatLngDTO location;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Long getId() {
         return id;
@@ -55,5 +59,21 @@ public class HouseDTO {
 
     public void setLocation(LatLngDTO location) {
         this.location = location;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
