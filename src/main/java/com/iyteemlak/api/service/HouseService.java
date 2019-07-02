@@ -34,6 +34,8 @@ public class HouseService {
             houseDTO.setContact(house.getContact());
             houseDTO.setDescription(house.getDescription());
             houseDTO.setLocation(latLngDTO);
+            houseDTO.setCreatedAt(house.getCreatedAt());
+            houseDTO.setUpdatedAt(house.getUpdatedAt());
             return houseDTO;
         }).collect(Collectors.toList());
     }
