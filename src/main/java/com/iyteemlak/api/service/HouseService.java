@@ -40,7 +40,7 @@ public class HouseService {
         }).collect(Collectors.toList());
     }
 
-    public void addHouse(AddHouseRequest addHouseRequest) {
+    public House addHouse(AddHouseRequest addHouseRequest) {
         House house = new House();
         house.setRooms(addHouseRequest.getRooms());
         house.setPrice(addHouseRequest.getPrice());
@@ -52,6 +52,7 @@ public class HouseService {
         }
         house.setActive(false);
         houseRepository.save(house);
+        return house;
     }
 
 }
